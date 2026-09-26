@@ -5,6 +5,431 @@
 
 
 /* =====================================================
+   INICIO - INDEX
+===================================================== */
+
+.page-hero {
+    min-height: 780px;
+    padding: 80px 25px 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #e8f8fc,
+        #fffaf2,
+        #f8e8ed,
+        #eee8f8
+    );
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoraciones pastel del fondo */
+
+.page-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background: #bfe5ef;
+
+    opacity: 0.45;
+
+    border-radius: 50%;
+
+    top: -80px;
+    left: -60px;
+}
+
+.page-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: #f4dce0;
+
+    opacity: 0.5;
+
+    border-radius: 50%;
+
+    bottom: -120px;
+    right: -80px;
+}
+
+
+/* Contenido completo del inicio */
+
+.page-hero-content {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* MENTE - DEPORTE - RENDIMIENTO */
+
+.hero-subtitle {
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    padding: 12px 25px;
+
+    background: #f7e8b5;
+
+    color: #35586b;
+
+    border-radius: 30px;
+
+    font-size: 1.4rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(80, 120, 140, 0.12);
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.page-hero h1 {
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 55px 35px;
+
+    background: linear-gradient(
+        135deg,
+        #bfe5ef,
+        #dff2f7,
+        #f7e8b5
+    );
+
+    border-radius: 35px;
+
+    font-size: clamp(4rem, 9vw, 8rem);
+
+    line-height: 1;
+
+    text-align: center;
+
+    color: #35586b;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        3px 4px 0 rgba(255, 255, 255, 0.7);
+
+    box-shadow:
+        0 12px 30px rgba(80, 120, 140, 0.15);
+
+    margin-bottom: 55px;
+}
+
+
+/* DESCRIPCIÓN DEL INICIO */
+
+.page-hero p:not(.hero-subtitle) {
+
+    max-width: 800px;
+
+    margin: 0 auto 40px;
+
+    padding: 30px 40px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    font-size: 1.2rem;
+
+    line-height: 1.9;
+
+    color: #60717a;
+
+    box-shadow: 0 8px 25px rgba(80, 120, 140, 0.10);
+}
+
+
+/* BOTÓN */
+
+.page-hero .btn {
+
+    margin-top: 10px;
+
+    padding: 15px 35px;
+
+    font-size: 1.05rem;
+}
+
+
+/* =====================================================
+   DESCRIPCIÓN QUE APARECE DESPUÉS DEL INICIO
+===================================================== */
+
+.page-description {
+
+    max-width: 900px;
+
+    margin: 70px auto;
+
+    padding: 40px 50px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #e8f8fc,
+        #f5d6df
+    );
+
+    border-radius: 30px;
+
+    border-top: 7px solid #e6c875;
+
+    box-shadow:
+        0 10px 30px rgba(80, 120, 140, 0.12);
+
+    font-size: 1.1rem;
+
+    line-height: 2;
+}
+
+
+/* =====================================================
+   TODO EL CONTENIDO DEL INDEX CENTRADO
+===================================================== */
+
+#inicio,
+#contenido,
+main {
+
+    text-align: center;
+}
+
+#inicio p,
+#contenido p,
+main p {
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+/* =====================================================
+   ESPACIO ENTRE LAS PARTES
+===================================================== */
+
+#inicio section,
+#contenido section {
+
+    margin-bottom: 70px;
+}
+
+
+/* =====================================================
+   TÍTULOS DE LAS SECCIONES DEL INDEX
+===================================================== */
+
+#inicio h2,
+#contenido h2,
+main h2 {
+
+    margin-top: 30px;
+
+    margin-bottom: 30px;
+
+    padding: 18px 30px;
+
+    display: inline-block;
+
+    background: linear-gradient(
+        135deg,
+        #dff2f7,
+        #f7e8b5
+    );
+
+    border-radius: 25px;
+
+    color: #35586b;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   PÁRRAFOS DEL INDEX
+===================================================== */
+
+#inicio .content-text,
+#contenido .content-text,
+main .content-text {
+
+    max-width: 850px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+
+    line-height: 2;
+}
+
+
+/* =====================================================
+   TARJETAS DEL INDEX
+===================================================== */
+
+#inicio .cards-grid,
+#contenido .cards-grid {
+
+    margin-top: 45px;
+
+    margin-bottom: 70px;
+}
+
+
+/* =====================================================
+   COLORES PASTEL PARA LAS TARJETAS
+===================================================== */
+
+#inicio .info-card:nth-child(1) {
+
+    background: #e8f8fc;
+}
+
+#inicio .info-card:nth-child(2) {
+
+    background: #f5d6df;
+}
+
+#inicio .info-card:nth-child(3) {
+
+    background: #ded4f3;
+}
+
+#inicio .info-card:nth-child(4) {
+
+    background: #d5eadc;
+}
+
+#inicio .info-card:nth-child(5) {
+
+    background: #f8ddc8;
+}
+
+#inicio .info-card:nth-child(6) {
+
+    background: #f7e8b5;
+}
+
+
+/* =====================================================
+   RESPONSIVE DEL INICIO
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .page-hero {
+
+        min-height: 700px;
+
+        padding: 70px 20px;
+    }
+
+    .page-hero h1 {
+
+        font-size: 5rem;
+
+        padding: 45px 25px;
+    }
+
+    .hero-subtitle {
+
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .page-hero {
+
+        min-height: 650px;
+
+        padding: 60px 15px;
+    }
+
+    .hero-subtitle {
+
+        font-size: 0.9rem;
+
+        letter-spacing: 2px;
+
+        padding: 10px 16px;
+    }
+
+    .page-hero h1 {
+
+        font-size: 3.3rem;
+
+        padding: 40px 15px;
+    }
+
+    .page-hero p:not(.hero-subtitle) {
+
+        font-size: 1rem;
+
+        padding: 25px 20px;
+    }
+
+    .page-description {
+
+        padding: 30px 20px;
+
+        font-size: 1rem;
+    }
+}
+
+/* =====================================================
    COLORES
 ===================================================== */
 
