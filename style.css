@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fuentes | Mente en Juego</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">🧠</span>
+            Mente en Juego
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="psicologia.html">Psicología</a></li>
+            <li><a href="rendimiento.html">Rendimiento</a></li>
+            <li><a href="motivacion.html">Motivación</a></li>
+            <li><a href="ansiedad.html">Estrés y ansiedad</a></li>
+            <li><a href="concentracion.html">Concentración</a></li>
+            <li><a href="tecnicas.html">Técnicas</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="test.html">Test</a></li>
+
+        </ul>
+
+        <button id="themeButton" class="theme-button">
+            🌙
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="page-hero">
+
+        <div class="page-hero-content">
+
+            <p class="hero-subtitle">
+                FUENTES Y BIBLIOGRAFÍA
+            </p>
+
+            <h1>
+                De dónde viene la información
+            </h1>
+
+            <p>
+                La información de este sitio fue organizada a partir de
+                fuentes educativas y académicas relacionadas con la
+                psicología del deporte.
+            </p>
+
+        </div>
+
+        <div class="page-hero-icon">
+            📚
+        </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+
+    <section class="content-section">
+
+        <div class="content-text">
+
+            <p class="section-label">
+                INFORMACIÓN
+            </p>
+
+            <h2>
+                ¿Por qué son importantes las fuentes?
+            </h2>
+
+            <p>
+                Cuando realizamos un trabajo académico es importante poder
+                identificar de dónde procede la información utilizada.
+            </p>
+
+            <p>
+                Las fuentes permiten ampliar los contenidos y comprobar
+                conceptos relacionados con la psicología, el deporte,
+                la motivación, el estrés, la concentración y el trabajo
+                en equipo.
+            </p>
+
+            <p>
+                Esta página reúne algunos recursos que pueden utilizarse
+                para continuar investigando sobre el tema.
+            </p>
+
+        </div>
+
+
+        <div class="definition-box">
+
+            <span>🔎</span>
+
+            <h3>
+                Investigar es comparar
+            </h3>
+
+            <p>
+                Una buena investigación utiliza información de fuentes
+                confiables y analiza los conceptos dentro de su contexto.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FUENTES PRINCIPALES -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                FUENTES PRINCIPALES
+            </p>
+
+            <h2>
+                Recursos para profundizar
+            </h2>
+
+        </div>
+
+
+        <div class="source-list">
+
+
+            <!-- APA -->
+
+            <article class="source-card">
+
+                <div class="source-icon">
+                    🧠
+                </div>
+
+                <div class="source-content">
+
+                    <span class="source-type">
+                        ORGANIZACIÓN PROFESIONAL
+                    </span>
+
+                    <h3>
+                        American Psychological Association
+                    </h3>
+
+                    <p>
+                        La American Psychological Association reúne información,
+                        recursos y publicaciones relacionadas con diferentes
+                        áreas de la psicología.
+                    </p>
+
+                    <a
+                        href="https://www.apa.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="source-link">
+                        Visitar sitio oficial →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- APA DIVISION 47 -->
+
+            <article class="source-card">
+
+                <div class="source-icon">
+                    🏃
+                </div>
+
+                <div class="source-content">
+
+                    <span class="source-type">
+                        PSICOLOGÍA DEL DEPORTE
+                    </span>
+
+                    <h3>
+                        APA Division 47 — Society for Sport, Exercise & Performance Psychology
+                    </h3>
+
+                    <p>
+                        División de la American Psychological Association
+                        dedicada a la psicología del deporte, el ejercicio
+                        y el rendimiento.
+                    </p>
+
+                    <a
+                        href="https://www.apa.org/about/division/div47"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="source-link">
+                        Visitar sitio →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- IOC -->
+
+            <article class="source-card">
+
+                <div class="source-icon">
+                    🏅
+                </div>
+
+                <div class="source-content">
+
+                    <span class="source-type">
+                        ORGANIZACIÓN DEPORTIVA
+                    </span>
+
+                    <h3>
+                        International Olympic Committee
+                    </h3>
+
+                    <p>
+                        El Comité Olímpico Internacional ofrece recursos
+                        relacionados con el deporte, los atletas y diferentes
+                        aspectos del movimiento olímpico.
+                    </p>
+
+                    <a
+                        href="https://olympics.com/ioc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="source-link">
+                        Visitar sitio oficial →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ISSP -->
+
+            <article class="source-card">
+
+                <div class="source-icon">
+                    🌎
+                </div>
+
+                <div class="source-content">
+
+                    <span class="source-type">
+                        ORGANIZACIÓN INTERNACIONAL
+                    </span>
+
+                    <h3>
+                        International Society of Sport Psychology
+                    </h3>
+
+                    <p>
+                        Organización internacional dedicada al desarrollo
+                        y difusión de conocimientos relacionados con la
+                        psicología del deporte.
+                    </p>
+
+                    <a
+                        href="https://issponline.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="source-link">
+                        Visitar sitio →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- TEMAS -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                CONTENIDOS CONSULTADOS
+            </p>
+
+            <h2>
+                Temas trabajados en la página
+            </h2>
+
+        </div>
+
+
+        <div class="topic-source-grid">
+
+            <div class="topic-source">
+
+                <span>01</span>
+
+                <h3>
+                    Psicología del deporte
+                </h3>
+
+                <p>
+                    Definición, objetivos y áreas de trabajo.
+                </p>
+
+            </div>
+
+
+            <div class="topic-source">
+
+                <span>02</span>
+
+                <h3>
+                    Rendimiento
+                </h3>
+
+                <p>
+                    Factores psicológicos relacionados con el rendimiento.
+                </p>
+
+            </div>
+
+
+            <div class="topic-source">
+
+                <span>03</span>
+
+                <h3>
+                    Motivación
+                </h3>
+
+                <p>
+                    Objetivos, motivación intrínseca y extrínseca.
+                </p>
+
+            </div>
+
+
+            <div class="topic-source">
+
+                <span>04</span>
+
+                <h3>
+                    Estrés y ansiedad
+                </h3>
+
+                <p>
+                    Respuestas psicológicas y preparación ante la presión.
+                </p>
+
+            </div>
+
+
+            <div class="topic-source">
+
+                <span>05</span>
+
+                <h3>
+                    Concentración
+                </h3>
+
+                <p>
+                    Atención, distracciones y recuperación del foco.
+                </p>
+
+            </div>
+
+
+            <div class="topic-source">
+
+                <span>06</span>
+
+                <h3>
+                    Trabajo en equipo
+                </h3>
+
+                <p>
+                    Comunicación, cooperación, roles y cohesión.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BIBLIOGRAFÍA -->
+
+    <section class="section bibliography-section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                BIBLIOGRAFÍA
+            </p>
+
+            <h2>
+                Para continuar investigando
+            </h2>
+
+        </div>
+
+
+        <div class="bibliography-box">
+
+            <p>
+                <strong>American Psychological Association.</strong>
+                Recursos sobre psicología y psicología del deporte.
+            </p>
+
+            <p>
+                <strong>American Psychological Association — Division 47.</strong>
+                Society for Sport, Exercise & Performance Psychology.
+            </p>
+
+            <p>
+                <strong>International Society of Sport Psychology.</strong>
+                Recursos y publicaciones sobre psicología del deporte.
+            </p>
+
+            <p>
+                <strong>International Olympic Committee.</strong>
+                Recursos relacionados con atletas, deporte y bienestar.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- NOTA -->
+
+    <section class="notice-box">
+
+        <div class="notice-icon">
+            📌
+        </div>
+
+        <div>
+
+            <h3>
+                Nota sobre este sitio
+            </h3>
+
+            <p>
+                Esta página web fue creada con fines educativos. Su objetivo
+                es presentar conceptos generales sobre psicología del deporte
+                de una manera sencilla y accesible. No reemplaza libros,
+                artículos científicos ni la orientación de profesionales.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="final-message">
+
+        <h2>
+            Aprender también es investigar.
+        </h2>
+
+        <p>
+            La psicología del deporte es un campo amplio que continúa
+            desarrollándose a través de la investigación y la práctica profesional.
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🧠</span>
+                Mente en Juego
+            </a>
+
+            <p>
+                Un espacio educativo sobre psicología del deporte.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h4>Explorar</h4>
+
+            <a href="psicologia.html">Psicología</a>
+            <a href="rendimiento.html">Rendimiento</a>
+            <a href="motivacion.html">Motivación</a>
+            <a href="test.html">Test</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Mente en Juego · Proyecto educativo</p>
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
