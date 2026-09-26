@@ -464,6 +464,14 @@ a:hover {
     margin-bottom: 0;
 }
 
+.page-description {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
 
 /* =========================================================
    10. CAJA DE DEFINICIÓN
