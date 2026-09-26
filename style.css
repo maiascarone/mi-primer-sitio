@@ -7,7 +7,31 @@
 /* =====================================================
    INICIO - INDEX
 ===================================================== */
+.boton-experiencia {
+    display: inline-block;
+    margin-top: 55px;
+    padding: 20px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #35586b;
+    background: linear-gradient(
+        135deg,
+        #a9dff0,
+        #f7e8b5,
+        #f5d6df,
+        #ded4f3
+    );
+    box-shadow: 0 10px 30px rgba(80, 120, 140, 0.25);
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
+.boton-experiencia:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 15px 35px rgba(80, 120, 140, 0.3);
+}
 .page-hero {
     min-height: 780px;
     padding: 80px 25px 100px;
