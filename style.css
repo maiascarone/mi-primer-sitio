@@ -1,546 +1,1336 @@
-<!DOCTYPE html>
-<html lang="es">
+/* =========================================================
+   PSICOLOGÍA DEL DEPORTE
+   STYLE.CSS
+   PALETA: AZUL + BEIGE + DORADO
+   ========================================================= */
+
+
+/* =========================================================
+   1. VARIABLES DE COLOR
+   ========================================================= */
+
+:root {
+    --azul-oscuro: #102a43;
+    --azul: #1f4e79;
+    --azul-medio: #2f6690;
+    --azul-claro: #dbe9f4;
+
+    --beige: #f4ead7;
+    --beige-claro: #faf6ee;
+    --beige-oscuro: #e7d5b5;
+
+    --dorado: #c69a3a;
+    --dorado-claro: #e1bd68;
+
+    --blanco: #ffffff;
+    --negro: #17202a;
+    --gris: #5f6b76;
+    --gris-claro: #e9edf1;
+
+    --sombra: 0 10px 30px rgba(16, 42, 67, 0.12);
+    --sombra-fuerte: 0 18px 45px rgba(16, 42, 67, 0.18);
+
+    --radio: 18px;
+    --transicion: 0.3s ease;
+}
+
+
+/* =========================================================
+   2. RESETEO GENERAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--beige-claro);
+    color: var(--negro);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   3. TEXTOS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--azul-oscuro);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 800;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
 
-<head>
+h3 {
+    font-size: 1.4rem;
+}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+h4 {
+    font-size: 1.1rem;
+}
 
-    <title>Fuentes | Mente en Juego</title>
+p {
+    margin-bottom: 15px;
+}
 
-    <link rel="stylesheet" href="style.css">
+a {
+    color: var(--azul);
+    text-decoration: none;
+    transition: var(--transicion);
+}
 
-</head>
+a:hover {
+    color: var(--dorado);
+}
 
-<body>
 
-<header class="header">
+/* =========================================================
+   4. BARRA DE NAVEGACIÓN
+   ========================================================= */
 
-    <nav class="navbar">
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--azul-oscuro);
+    border-bottom: 3px solid var(--dorado);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
 
-        <a href="index.html" class="logo">
-            <span class="logo-icon">🧠</span>
-            Mente en Juego
-        </a>
+.navbar {
+    width: min(1200px, 92%);
+    margin: auto;
 
-        <ul class="nav-links">
+    min-height: 78px;
 
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="psicologia.html">Psicología</a></li>
-            <li><a href="rendimiento.html">Rendimiento</a></li>
-            <li><a href="motivacion.html">Motivación</a></li>
-            <li><a href="ansiedad.html">Estrés y ansiedad</a></li>
-            <li><a href="concentracion.html">Concentración</a></li>
-            <li><a href="tecnicas.html">Técnicas</a></li>
-            <li><a href="equipo.html">Equipo</a></li>
-            <li><a href="test.html">Test</a></li>
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        </ul>
+    gap: 25px;
+}
 
-        <button id="themeButton" class="theme-button">
-            🌙
-        </button>
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 
-    </nav>
+    color: var(--blanco);
+    font-size: 1.2rem;
+    font-weight: bold;
 
-</header>
+    white-space: nowrap;
+}
 
+.logo:hover {
+    color: var(--dorado-claro);
+}
 
-<main>
+.logo-icon {
+    width: 42px;
+    height: 42px;
 
-    <!-- HERO -->
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    <section class="page-hero">
+    background: var(--dorado);
+    color: var(--azul-oscuro);
 
-        <div class="page-hero-content">
+    border-radius: 12px;
 
-            <p class="hero-subtitle">
-                FUENTES Y BIBLIOGRAFÍA
-            </p>
+    font-size: 1.4rem;
+    font-weight: bold;
+}
 
-            <h1>
-                De dónde viene la información
-            </h1>
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 
-            <p>
-                La información de este sitio fue organizada a partir de
-                fuentes educativas y académicas relacionadas con la
-                psicología del deporte.
-            </p>
+    list-style: none;
 
-        </div>
+    overflow-x: auto;
+}
 
-        <div class="page-hero-icon">
-            📚
-        </div>
+.nav-links a {
+    display: block;
 
-    </section>
+    padding: 10px 13px;
 
+    color: var(--blanco);
 
-    <!-- INTRO -->
+    border-radius: 10px;
 
-    <section class="content-section">
+    font-size: 0.9rem;
+    font-weight: 600;
 
-        <div class="content-text">
+    white-space: nowrap;
+}
 
-            <p class="section-label">
-                INFORMACIÓN
-            </p>
+.nav-links a:hover,
+.nav-links a.active {
+    background: var(--dorado);
+    color: var(--azul-oscuro);
+}
 
-            <h2>
-                ¿Por qué son importantes las fuentes?
-            </h2>
 
-            <p>
-                Cuando realizamos un trabajo académico es importante poder
-                identificar de dónde procede la información utilizada.
-            </p>
+/* =========================================================
+   5. BOTÓN DEL TEMA
+   ========================================================= */
 
-            <p>
-                Las fuentes permiten ampliar los contenidos y comprobar
-                conceptos relacionados con la psicología, el deporte,
-                la motivación, el estrés, la concentración y el trabajo
-                en equipo.
-            </p>
+.theme-button {
+    border: 1px solid var(--dorado);
+    background: transparent;
+    color: var(--blanco);
 
-            <p>
-                Esta página reúne algunos recursos que pueden utilizarse
-                para continuar investigando sobre el tema.
-            </p>
+    padding: 9px 14px;
 
-        </div>
+    border-radius: 10px;
 
+    cursor: pointer;
 
-        <div class="definition-box">
+    font-weight: bold;
 
-            <span>🔎</span>
+    transition: var(--transicion);
+}
 
-            <h3>
-                Investigar es comparar
-            </h3>
+.theme-button:hover {
+    background: var(--dorado);
+    color: var(--azul-oscuro);
+}
 
-            <p>
-                Una buena investigación utiliza información de fuentes
-                confiables y analiza los conceptos dentro de su contexto.
-            </p>
 
-        </div>
+/* =========================================================
+   6. PORTADA / HERO
+   ========================================================= */
 
-    </section>
+.page-hero {
+    position: relative;
 
+    background:
+        linear-gradient(
+            135deg,
+            var(--azul-oscuro),
+            var(--azul)
+        );
 
-    <!-- FUENTES PRINCIPALES -->
+    color: var(--blanco);
 
-    <section class="section">
+    padding: 100px 20px;
 
-        <div class="section-heading">
+    overflow: hidden;
+}
 
-            <p class="section-label">
-                FUENTES PRINCIPALES
-            </p>
+.page-hero::before {
+    content: "";
 
-            <h2>
-                Recursos para profundizar
-            </h2>
+    position: absolute;
 
-        </div>
+    width: 350px;
+    height: 350px;
 
+    border-radius: 50%;
 
-        <div class="source-list">
+    background: rgba(198, 154, 58, 0.12);
 
+    top: -150px;
+    right: -100px;
+}
 
-            <!-- APA -->
+.page-hero::after {
+    content: "";
 
-            <article class="source-card">
+    position: absolute;
 
-                <div class="source-icon">
-                    🧠
-                </div>
+    width: 250px;
+    height: 250px;
 
-                <div class="source-content">
+    border-radius: 50%;
 
-                    <span class="source-type">
-                        ORGANIZACIÓN PROFESIONAL
-                    </span>
+    border: 2px solid rgba(225, 189, 104, 0.25);
 
-                    <h3>
-                        American Psychological Association
-                    </h3>
+    bottom: -130px;
+    left: -80px;
+}
 
-                    <p>
-                        La American Psychological Association reúne información,
-                        recursos y publicaciones relacionadas con diferentes
-                        áreas de la psicología.
-                    </p>
+.page-hero-content {
+    position: relative;
+    z-index: 2;
 
-                    <a
-                        href="https://www.apa.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="source-link">
-                        Visitar sitio oficial →
-                    </a>
+    width: min(1100px, 92%);
+    margin: auto;
+}
 
-                </div>
+.page-hero h1 {
+    color: var(--blanco);
+    max-width: 900px;
+}
 
-            </article>
+.page-hero p {
+    color: #edf4f9;
+    font-size: 1.15rem;
+    max-width: 750px;
+}
 
+.hero-subtitle {
+    color: var(--dorado-claro) !important;
 
-            <!-- APA DIVISION 47 -->
+    text-transform: uppercase;
+    letter-spacing: 3px;
 
-            <article class="source-card">
+    font-weight: bold;
+    font-size: 0.9rem !important;
+}
 
-                <div class="source-icon">
-                    🏃
-                </div>
+.page-hero-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
 
-                <div class="source-content">
 
-                    <span class="source-type">
-                        PSICOLOGÍA DEL DEPORTE
-                    </span>
+/* =========================================================
+   7. CONTENEDOR GENERAL
+   ========================================================= */
 
-                    <h3>
-                        APA Division 47 — Society for Sport, Exercise & Performance Psychology
-                    </h3>
+.section {
+    width: min(1150px, 92%);
+    margin: auto;
+    padding: 80px 0;
+}
 
-                    <p>
-                        División de la American Psychological Association
-                        dedicada a la psicología del deporte, el ejercicio
-                        y el rendimiento.
-                    </p>
+.content-section {
+    width: min(1000px, 92%);
+    margin: 60px auto;
+}
 
-                    <a
-                        href="https://www.apa.org/about/division/div47"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="source-link">
-                        Visitar sitio →
-                    </a>
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
 
-                </div>
+.section-heading h2 {
+    margin-bottom: 10px;
+}
 
-            </article>
+.section-label {
+    color: var(--dorado);
 
+    text-transform: uppercase;
+    letter-spacing: 2px;
 
-            <!-- IOC -->
+    font-size: 0.85rem;
+    font-weight: bold;
 
-            <article class="source-card">
+    margin-bottom: 10px;
+}
 
-                <div class="source-icon">
-                    🏅
-                </div>
 
-                <div class="source-content">
+/* =========================================================
+   8. TEXTO
+   ========================================================= */
 
-                    <span class="source-type">
-                        ORGANIZACIÓN DEPORTIVA
-                    </span>
+.content-text {
+    font-size: 1.05rem;
+    color: #384653;
+}
 
-                    <h3>
-                        International Olympic Committee
-                    </h3>
+.content-text p:last-child {
+    margin-bottom: 0;
+}
 
-                    <p>
-                        El Comité Olímpico Internacional ofrece recursos
-                        relacionados con el deporte, los atletas y diferentes
-                        aspectos del movimiento olímpico.
-                    </p>
 
-                    <a
-                        href="https://olympics.com/ioc"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="source-link">
-                        Visitar sitio oficial →
-                    </a>
+/* =========================================================
+   9. CAJA DE DEFINICIÓN
+   ========================================================= */
 
-                </div>
+.definition-box {
+    background: var(--azul);
+    color: var(--blanco);
 
-            </article>
+    padding: 30px;
 
+    margin: 30px 0;
 
-            <!-- ISSP -->
+    border-left: 6px solid var(--dorado);
 
-            <article class="source-card">
+    border-radius: var(--radio);
 
-                <div class="source-icon">
-                    🌎
-                </div>
+    box-shadow: var(--sombra);
+}
 
-                <div class="source-content">
+.definition-box h3 {
+    color: var(--dorado-claro);
+}
 
-                    <span class="source-type">
-                        ORGANIZACIÓN INTERNACIONAL
-                    </span>
+.definition-box p {
+    color: #f4f7f9;
+}
 
-                    <h3>
-                        International Society of Sport Psychology
-                    </h3>
 
-                    <p>
-                        Organización internacional dedicada al desarrollo
-                        y difusión de conocimientos relacionados con la
-                        psicología del deporte.
-                    </p>
+/* =========================================================
+   10. TARJETAS
+   ========================================================= */
 
-                    <a
-                        href="https://issponline.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="source-link">
-                        Visitar sitio →
-                    </a>
+.cards-grid {
+    display: grid;
 
-                </div>
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
 
-            </article>
+    gap: 25px;
+}
 
+.info-card,
+.technique-card,
+.role-card,
+.distraction-card,
+.source-card {
+    background: var(--blanco);
 
-        </div>
+    padding: 30px;
 
-    </section>
+    border-radius: var(--radio);
 
+    border: 1px solid var(--beige-oscuro);
 
-    <!-- TEMAS -->
+    box-shadow: var(--sombra);
 
-    <section class="section">
+    transition: var(--transicion);
+}
 
-        <div class="section-heading">
+.info-card:hover,
+.technique-card:hover,
+.role-card:hover,
+.distraction-card:hover,
+.source-card:hover {
+    transform: translateY(-7px);
 
-            <p class="section-label">
-                CONTENIDOS CONSULTADOS
-            </p>
+    box-shadow: var(--sombra-fuerte);
 
-            <h2>
-                Temas trabajados en la página
-            </h2>
+    border-color: var(--dorado);
+}
 
-        </div>
+.card-icon,
+.technique-icon,
+.highlight-icon,
+.source-icon {
+    width: 55px;
+    height: 55px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        <div class="topic-source-grid">
+    background: var(--beige);
 
-            <div class="topic-source">
+    color: var(--azul-oscuro);
 
-                <span>01</span>
+    border-radius: 15px;
 
-                <h3>
-                    Psicología del deporte
-                </h3>
+    font-size: 1.7rem;
 
-                <p>
-                    Definición, objetivos y áreas de trabajo.
-                </p>
+    margin-bottom: 20px;
+}
 
-            </div>
+.info-card h3,
+.technique-card h3,
+.role-card h3,
+.distraction-card h3,
+.source-card h3 {
+    color: var(--azul-oscuro);
+}
 
+.card-example {
+    margin-top: 18px;
 
-            <div class="topic-source">
+    padding: 15px;
 
-                <span>02</span>
+    background: var(--beige-claro);
 
-                <h3>
-                    Rendimiento
-                </h3>
+    border-left: 3px solid var(--dorado);
 
-                <p>
-                    Factores psicológicos relacionados con el rendimiento.
-                </p>
+    border-radius: 8px;
 
-            </div>
+    font-size: 0.95rem;
+}
 
 
-            <div class="topic-source">
+/* =========================================================
+   11. SECCIÓN DESTACADA
+   ========================================================= */
 
-                <span>03</span>
+.highlight-section {
+    background: var(--beige);
 
-                <h3>
-                    Motivación
-                </h3>
+    padding: 40px;
 
-                <p>
-                    Objetivos, motivación intrínseca y extrínseca.
-                </p>
+    border-radius: 25px;
 
-            </div>
+    border: 1px solid var(--beige-oscuro);
 
+    box-shadow: var(--sombra);
 
-            <div class="topic-source">
+    margin: 40px 0;
+}
 
-                <span>04</span>
+.highlight-section h2,
+.highlight-section h3 {
+    color: var(--azul-oscuro);
+}
 
-                <h3>
-                    Estrés y ansiedad
-                </h3>
 
-                <p>
-                    Respuestas psicológicas y preparación ante la presión.
-                </p>
+/* =========================================================
+   12. DISTRACTORES
+   ========================================================= */
 
-            </div>
+.distraction-grid {
+    display: grid;
 
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
 
-            <div class="topic-source">
+    gap: 20px;
+}
 
-                <span>05</span>
+.distraction-card {
+    text-align: center;
+}
 
-                <h3>
-                    Concentración
-                </h3>
 
-                <p>
-                    Atención, distracciones y recuperación del foco.
-                </p>
+/* =========================================================
+   13. PASOS
+   ========================================================= */
 
-            </div>
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 
-            <div class="topic-source">
+    background: var(--blanco);
 
-                <span>06</span>
+    padding: 25px;
 
-                <h3>
-                    Trabajo en equipo
-                </h3>
+    border-radius: var(--radio);
 
-                <p>
-                    Comunicación, cooperación, roles y cohesión.
-                </p>
+    border-left: 5px solid var(--dorado);
 
-            </div>
+    box-shadow: var(--sombra);
+}
 
-        </div>
+.step-number,
+.technique-number {
+    min-width: 45px;
+    height: 45px;
 
-    </section>
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    border-radius: 50%;
 
-    <!-- BIBLIOGRAFÍA -->
+    background: var(--azul-oscuro);
+    color: var(--dorado-claro);
 
-    <section class="section bibliography-section">
+    font-weight: bold;
+}
 
-        <div class="section-heading">
 
-            <p class="section-label">
-                BIBLIOGRAFÍA
-            </p>
+/* =========================================================
+   14. TÉCNICAS
+   ========================================================= */
 
-            <h2>
-                Para continuar investigando
-            </h2>
+.technique-grid {
+    display: grid;
 
-        </div>
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
 
+    gap: 25px;
+}
 
-        <div class="bibliography-box">
+.technique-card {
+    position: relative;
+}
 
-            <p>
-                <strong>American Psychological Association.</strong>
-                Recursos sobre psicología y psicología del deporte.
-            </p>
+.technique-how {
+    margin-top: 20px;
 
-            <p>
-                <strong>American Psychological Association — Division 47.</strong>
-                Society for Sport, Exercise & Performance Psychology.
-            </p>
+    padding: 15px;
 
-            <p>
-                <strong>International Society of Sport Psychology.</strong>
-                Recursos y publicaciones sobre psicología del deporte.
-            </p>
+    background: var(--azul-claro);
 
-            <p>
-                <strong>International Olympic Committee.</strong>
-                Recursos relacionados con atletas, deporte y bienestar.
-            </p>
+    border-radius: 10px;
+}
 
-        </div>
+.technique-how strong {
+    color: var(--azul-oscuro);
+}
 
-    </section>
 
+/* =========================================================
+   15. EQUIPO
+   ========================================================= */
 
-    <!-- NOTA -->
+.role-grid {
+    display: grid;
 
-    <section class="notice-box">
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
 
-        <div class="notice-icon">
-            📌
-        </div>
+    gap: 25px;
+}
 
-        <div>
+.role-card {
+    text-align: center;
+}
 
-            <h3>
-                Nota sobre este sitio
-            </h3>
 
-            <p>
-                Esta página web fue creada con fines educativos. Su objetivo
-                es presentar conceptos generales sobre psicología del deporte
-                de una manera sencilla y accesible. No reemplaza libros,
-                artículos científicos ni la orientación de profesionales.
-            </p>
+/* =========================================================
+   16. AVISOS
+   ========================================================= */
 
-        </div>
+.notice-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 
-    </section>
+    padding: 25px;
 
+    margin: 30px 0;
 
-    <!-- FINAL -->
+    background: #fff8e7;
 
-    <section class="final-message">
+    border: 1px solid var(--dorado);
 
-        <h2>
-            Aprender también es investigar.
-        </h2>
+    border-radius: var(--radio);
+}
 
-        <p>
-            La psicología del deporte es un campo amplio que continúa
-            desarrollándose a través de la investigación y la práctica profesional.
-        </p>
+.notice-icon {
+    font-size: 2rem;
+}
 
-    </section>
 
-</main>
+/* =========================================================
+   17. MENSAJE FINAL
+   ========================================================= */
 
+.final-message {
+    text-align: center;
 
-<footer class="footer">
+    background: var(--azul-oscuro);
 
-    <div class="footer-content">
+    color: var(--blanco);
 
-        <div class="footer-brand">
+    padding: 55px 30px;
 
-            <a href="index.html" class="logo">
-                <span class="logo-icon">🧠</span>
-                Mente en Juego
-            </a>
+    border-radius: 25px;
 
-            <p>
-                Un espacio educativo sobre psicología del deporte.
-            </p>
+    margin: 70px auto;
 
-        </div>
+    max-width: 1000px;
 
-        <div class="footer-links">
+    box-shadow: var(--sombra-fuerte);
+}
 
-            <h4>Explorar</h4>
+.final-message h2 {
+    color: var(--dorado-claro);
+}
 
-            <a href="psicologia.html">Psicología</a>
-            <a href="rendimiento.html">Rendimiento</a>
-            <a href="motivacion.html">Motivación</a>
-            <a href="test.html">Test</a>
+.final-message p {
+    color: #e9f0f5;
+}
 
-        </div>
 
-    </div>
+/* =========================================================
+   18. BOTONES
+   ========================================================= */
 
-    <div class="footer-bottom">
-        <p>© 2026 Mente en Juego · Proyecto educativo</p>
-    </div>
+.btn {
+    display: inline-flex;
 
-</footer>
+    align-items: center;
+    justify-content: center;
 
+    padding: 13px 25px;
 
-<script src="script.js"></script>
+    border-radius: 10px;
 
-</body>
-</html>
+    border: 2px solid transparent;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: var(--transicion);
+}
+
+.btn-primary {
+    background: var(--dorado);
+    color: var(--azul-oscuro);
+}
+
+.btn-primary:hover {
+    background: var(--dorado-claro);
+
+    color: var(--azul-oscuro);
+
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+}
+
+.btn-secondary:hover {
+    background: var(--azul);
+    color: var(--blanco);
+}
+
+
+/* =========================================================
+   19. TEST
+   ========================================================= */
+
+.test-introduction {
+    background: var(--beige);
+
+    padding: 35px;
+
+    border-radius: var(--radio);
+
+    margin-bottom: 40px;
+
+    border: 1px solid var(--beige-oscuro);
+}
+
+.test-intro-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.test-container {
+    width: min(900px, 92%);
+    margin: auto;
+}
+
+.question-card {
+    background: var(--blanco);
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+
+    border: 1px solid var(--gris-claro);
+}
+
+.question-number {
+    display: inline-block;
+
+    background: var(--azul-oscuro);
+
+    color: var(--dorado-claro);
+
+    padding: 6px 12px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.answer-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    margin-top: 10px;
+
+    border: 1px solid var(--gris-claro);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: var(--transicion);
+}
+
+.answer-option:hover {
+    background: var(--beige-claro);
+
+    border-color: var(--dorado);
+}
+
+.answer-option.selected {
+    background: var(--azul-claro);
+
+    border-color: var(--azul);
+}
+
+.answer-option input {
+    accent-color: var(--dorado);
+}
+
+.test-submit {
+    text-align: center;
+
+    margin: 40px 0;
+}
+
+
+/* =========================================================
+   20. RESULTADO DEL TEST
+   ========================================================= */
+
+.test-result {
+    display: none;
+
+    text-align: center;
+
+    background: var(--azul-oscuro);
+
+    color: var(--blanco);
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    margin: 40px 0;
+
+    box-shadow: var(--sombra-fuerte);
+}
+
+.test-result.show {
+    display: block;
+
+    animation: aparecer 0.5s ease;
+}
+
+.result-icon {
+    font-size: 3.5rem;
+
+    margin-bottom: 15px;
+}
+
+.result-score {
+    color: var(--dorado-claro);
+
+    font-size: 2.2rem;
+
+    font-weight: bold;
+
+    margin: 15px 0;
+}
+
+#resultDescription {
+    color: #edf4f9;
+}
+
+
+/* =========================================================
+   21. FUENTES
+   ========================================================= */
+
+.source-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.source-card {
+    display: flex;
+
+    gap: 20px;
+
+    align-items: flex-start;
+}
+
+.source-type {
+    display: inline-block;
+
+    color: var(--dorado);
+
+    font-size: 0.8rem;
+
+    text-transform: uppercase;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+.source-content {
+    flex: 1;
+}
+
+.source-link {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: var(--azul);
+
+    font-weight: bold;
+}
+
+.source-link:hover {
+    color: var(--dorado);
+}
+
+.topic-source-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+
+    gap: 20px;
+}
+
+.topic-source {
+    padding: 25px;
+
+    background: var(--beige);
+
+    border-radius: var(--radio);
+
+    border: 1px solid var(--beige-oscuro);
+}
+
+.bibliography-box {
+    background: var(--azul-oscuro);
+
+    color: var(--blanco);
+
+    padding: 35px;
+
+    border-radius: var(--radio);
+
+    margin-top: 40px;
+}
+
+.bibliography-box h2,
+.bibliography-box h3 {
+    color: var(--dorado-claro);
+}
+
+
+/* =========================================================
+   22. FOOTER
+   ========================================================= */
+
+.footer {
+    background: var(--azul-oscuro);
+
+    color: var(--blanco);
+
+    margin-top: 80px;
+
+    border-top: 4px solid var(--dorado);
+}
+
+.footer-content {
+    width: min(1150px, 92%);
+
+    margin: auto;
+
+    padding: 55px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-brand h3 {
+    color: var(--dorado-claro);
+}
+
+.footer p {
+    color: #d9e3eb;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #e8eef2;
+}
+
+.footer-links a:hover {
+    color: var(--dorado-claro);
+}
+
+.footer-bottom {
+    text-align: center;
+
+    padding: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    color: #b9c7d2;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   23. BOTÓN VOLVER ARRIBA
+   ========================================================= */
+
+.back-to-top {
+    background: var(--dorado) !important;
+
+    color: var(--azul-oscuro) !important;
+
+    font-size: 1.4rem;
+
+    box-shadow: var(--sombra);
+
+    transition: var(--transicion);
+}
+
+.back-to-top:hover {
+    background: var(--dorado-claro) !important;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   24. ANIMACIONES
+   ========================================================= */
+
+.info-card,
+.technique-card,
+.role-card,
+.distraction-card,
+.source-card,
+.step,
+.highlight-section,
+.definition-box {
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.info-card.visible,
+.technique-card.visible,
+.role-card.visible,
+.distraction-card.visible,
+.source-card.visible,
+.step.visible,
+.highlight-section.visible,
+.definition-box.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   25. MODO OSCURO
+   ========================================================= */
+
+body.dark-mode {
+    --beige-claro: #101c28;
+    --beige: #182b3d;
+    --beige-oscuro: #29445a;
+
+    --blanco: #172b3d;
+    --negro: #f0f4f7;
+    --gris: #c6d0d8;
+    --gris-claro: #355066;
+
+    background: var(--beige-claro);
+    color: #edf3f7;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #f2f6f8;
+}
+
+body.dark-mode .content-text {
+    color: #d6e0e7;
+}
+
+body.dark-mode .info-card,
+body.dark-mode .technique-card,
+body.dark-mode .role-card,
+body.dark-mode .distraction-card,
+body.dark-mode .source-card,
+body.dark-mode .question-card {
+    background: #172b3d;
+    border-color: #355066;
+}
+
+body.dark-mode .card-example,
+body.dark-mode .technique-how {
+    background: #1e3549;
+}
+
+body.dark-mode .answer-option {
+    border-color: #355066;
+}
+
+body.dark-mode .answer-option:hover {
+    background: #203b50;
+}
+
+body.dark-mode .answer-option.selected {
+    background: #264967;
+}
+
+body.dark-mode .highlight-section,
+body.dark-mode .test-introduction,
+body.dark-mode .topic-source {
+    background: #182b3d;
+    border-color: #355066;
+}
+
+body.dark-mode .notice-box {
+    background: #3b3422;
+}
+
+
+/* =========================================================
+   26. RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-wrap: wrap;
+
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        order: 3;
+
+        padding-bottom: 5px;
+    }
+
+    .page-hero {
+        padding: 75px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   27. RESPONSIVE - CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .navbar {
+        width: 94%;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-links {
+        gap: 2px;
+    }
+
+    .nav-links a {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .theme-button {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .page-hero {
+        padding: 65px 20px;
+    }
+
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .page-hero p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .content-section {
+        margin: 40px auto;
+    }
+
+    .definition-box,
+    .highlight-section,
+    .final-message {
+        padding: 25px 20px;
+    }
+
+    .info-card,
+    .technique-card,
+    .role-card,
+    .distraction-card,
+    .source-card {
+        padding: 23px;
+    }
+
+    .step {
+        padding: 20px;
+    }
+
+    .source-card {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .test-container {
+        width: 94%;
+    }
+
+    .question-card {
+        padding: 22px;
+    }
+
+    .test-result {
+        padding: 30px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   28. ACCESIBILIDAD
+   ========================================================= */
+
+button,
+a,
+input {
+    outline-color: var(--dorado);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--dorado);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   29. REDUCIR ANIMACIONES
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
