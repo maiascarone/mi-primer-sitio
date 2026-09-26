@@ -1964,3 +1964,113 @@ input:focus {
         transition: none !important;
     }
 }
+/* =========================================
+   INICIO - LA MENTE TAMBIÉN ENTRENA
+========================================= */
+
+.inicio {
+    width: 100%;
+    min-height: 650px;
+
+    padding: 100px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #e8f8fc,
+        #fffaf2,
+        #f8e8ed,
+        #eee8f8
+    );
+}
+
+
+/* TÍTULO ENORME */
+
+.titulo-inicio {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    font-size: clamp(4.5rem, 10vw, 9rem);
+
+    line-height: 1;
+
+    color: #35586b;
+
+    background: linear-gradient(
+        135deg,
+        #bfe5ef,
+        #dff2f7,
+        #f7e8b5
+    );
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 12px 35px rgba(80, 120, 140, 0.15);
+
+    text-shadow:
+        3px 4px 0 rgba(255, 255, 255, 0.8);
+}
+
+
+/* ESPACIO Y TEXTO DE ABAJO */
+
+.texto-inicio {
+    max-width: 850px;
+
+    margin: 70px auto 0;
+
+    padding: 30px 40px;
+
+    text-align: center;
+
+    font-size: 1.25rem;
+
+    line-height: 2;
+
+    color: #60717a;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(80, 120, 140, 0.10);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .inicio {
+        padding: 70px 15px;
+    }
+
+    .titulo-inicio {
+        font-size: 3.8rem;
+
+        padding: 40px 20px;
+    }
+
+    .texto-inicio {
+        margin-top: 50px;
+
+        padding: 25px 20px;
+
+        font-size: 1rem;
+    }
+}
