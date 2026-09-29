@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comparte tu experiencia | La mente también entrena</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+            La mente también entrena
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="psicologia.html">Psicología</a>
+            <a href="rendimiento.html">Rendimiento</a>
+            <a href="motivacion.html">Motivación</a>
+            <a href="ansiedad.html">Ansiedad</a>
+            <a href="concentracion.html">Concentración</a>
+            <a href="tecnicas.html">Técnicas</a>
+            <a href="equipo.html">Equipo</a>
+            <a href="test.html">Test</a>
+            <a href="fuentes.html">Fuentes</a>
+
+            <button id="theme-toggle" aria-label="Cambiar modo oscuro">
+                🌙
+            </button>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         PRESENTACIÓN
+    ========================== -->
+
+    <main>
+
+        <section class="experience-hero">
+
+            <div class="experience-hero-content">
+
+                <span class="experience-icon">💬</span>
+
+                <h1>Comparte tu experiencia</h1>
+
+                <p>
+                    El deporte también está lleno de emociones,
+                    desafíos, aprendizajes y momentos que vale la pena compartir.
+                </p>
+
+                <p>
+                    Contá tu experiencia y ayudá a que otras personas
+                    puedan sentirse identificadas con vos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FORMULARIO
+        ========================== -->
+
+        <section class="experience-section">
+
+            <div class="experience-box">
+
+                <h2>🌟 Contanos tu experiencia</h2>
+
+                <p class="experience-description">
+                    No importa si practicás un deporte profesionalmente,
+                    en un equipo, en el colegio o simplemente por diversión.
+                    ¡Todas las experiencias cuentan!
+                </p>
+
+                <form id="experience-form">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Tu nombre o apodo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Ej.: Sofi"
+                            maxlength="30"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="sport">
+                            ¿Qué deporte practicás?
+                        </label>
+
+                        <input
+                            type="text"
+                            id="sport"
+                            name="sport"
+                            placeholder="Ej.: Vóley, fútbol, hockey..."
+                            maxlength="30"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="experience">
+                            Compartí tu experiencia
+                        </label>
+
+                        <textarea
+                            id="experience"
+                            name="experience"
+                            rows="7"
+                            maxlength="600"
+                            placeholder="Contanos algo que hayas vivido en el deporte, un desafío que hayas superado, algo que hayas aprendido o cómo te sentís al practicarlo..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="experience-button"
+                    >
+                        ✨ Compartir experiencia
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EXPERIENCIAS
+        ========================== -->
+
+        <section class="community-section">
+
+            <div class="community-title">
+
+                <h2>💭 Experiencias de otras personas</h2>
+
+                <p>
+                    Acá podés leer lo que otras personas tienen para contar
+                    sobre su relación con el deporte.
+                </p>
+
+            </div>
+
+
+            <div id="experiences-container">
+
+                <div class="no-experiences">
+
+                    <span>🌱</span>
+
+                    <h3>¡Sé la primera persona en compartir!</h3>
+
+                    <p>
+                        Tu experiencia puede ayudar, acompañar o inspirar
+                        a alguien que esté pasando por algo parecido.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MENSAJE FINAL
+        ========================== -->
+
+        <section class="experience-final">
+
+            <div class="experience-final-content">
+
+                <h2>La mente también forma parte del entrenamiento</h2>
+
+                <p>
+                    Hablar sobre lo que sentimos, reconocer nuestras dificultades
+                    y compartir nuestros aprendizajes también es parte del deporte.
+                </p>
+
+                <a
+                    href="index.html"
+                    class="back-home-button"
+                >
+                    ← Volver al inicio
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer>
+
+        <p>
+            La mente también entrena · Psicología del deporte
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
