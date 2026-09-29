@@ -1974,6 +1974,46 @@ input:focus {
 
     outline: 3px solid var(--dorado);
 
+   /* IMÁGENES DE LA PÁGINA DE INICIO */
+
+.hero-image {
+    width: 100%;
+    max-width: 520px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 12px 30px rgba(80, 120, 140, 0.18);
+    margin-bottom: 25px;
+}
+
+.section-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 35px 0 55px;
+}
+
+.section-image img {
+    width: 100%;
+    max-width: 850px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 12px 30px rgba(80, 120, 140, 0.16);
+}
+
+@media (max-width: 700px) {
+
+    .hero-image {
+        height: 250px;
+    }
+
+    .section-image img {
+        height: 220px;
+    }
+
+}
+
     outline-offset: 3px;
 }
 
