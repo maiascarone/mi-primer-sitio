@@ -714,6 +714,144 @@ window.addEventListener(
 );
 
 
+
+```javascript
+// ======================================
+// COMPARTIR EXPERIENCIA
+// ======================================
+
+const experienceForm = document.getElementById("experienceForm");
+const experiencesContainer = document.getElementById("experiencesContainer");
+
+experienceForm.addEventListener("submit", function(event) {
+
+    // Evita que la página se recargue
+    event.preventDefault();
+
+    // Obtener los datos escritos
+    const name = document.getElementById("name").value.trim();
+    const sport = document.getElementById("sport").value.trim();
+    const experience = document.getElementById("experience").value.trim();
+
+    // Crear la tarjeta
+    const card = document.createElement("article");
+    card.className = "experience-card";
+
+    // Primera letra del nombre
+    const initial = name.charAt(0).toUpperCase();
+
+    card.innerHTML = `
+        <div class="person-info">
+
+            <div class="avatar">
+                ${initial}
+            </div>
+
+            <div>
+                <h3>${name}</h3>
+                <span>${sport}</span>
+            </div>
+
+        </div>
+
+        <p class="experience-text">
+            ${experience}
+        </p>
+
+        <div class="comments">
+
+            <h4>Comentarios</h4>
+
+            <div class="comment-list">
+                <p class="no-comments">
+                    Sé el primero en comentar.
+                </p>
+            </div>
+
+            <form class="comment-form">
+
+                <input
+                    type="text"
+                    placeholder="Escribí un comentario..."
+                    class="comment-input"
+                >
+
+                <button type="submit">
+                    Comentar
+                </button>
+
+            </form>
+
+        </div>
+    `;
+
+    // Agregar la nueva experiencia arriba de las demás
+    experiencesContainer.prepend(card);
+
+    // Vaciar formulario
+    experienceForm.reset();
+
+    // Llevar al usuario a la experiencia publicada
+    card.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+});
+
+
+// ======================================
+// COMENTARIOS
+// ======================================
+
+document.addEventListener("submit", function(event) {
+
+    if (!event.target.classList.contains("comment-form")) {
+        return;
+    }
+
+    // Evitar que se recargue la página
+    event.preventDefault();
+
+    const form = event.target;
+
+    const input = form.querySelector(".comment-input");
+
+    const commentText = input.value.trim();
+
+    if (commentText === "") {
+        return;
+    }
+
+    const commentList = form.parentElement.querySelector(".comment-list");
+
+    // Si decía "Sé el primero en comentar", lo sacamos
+    const noComments = commentList.querySelector(".no-comments");
+
+    if (noComments) {
+        noComments.remove();
+    }
+
+    // Crear comentario
+    const comment = document.createElement("div");
+
+    comment.className = "comment";
+
+    comment.innerHTML = `
+        <strong>Vos:</strong>
+        ${commentText}
+    `;
+
+    // Agregar comentario
+    commentList.appendChild(comment);
+
+    // Limpiar input
+    input.value = "";
+
+});
+```
+
+
 /* =========================================================
    14. ACCESIBILIDAD
    ========================================================= */
